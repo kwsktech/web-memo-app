@@ -40,20 +40,51 @@ def delete_memo(memo_id):
 HTML_TEMPLATE = '''
 <!doctype html>
 <html>
-<head><title>Webメモアプリ（削除機能つき）</title></head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webメモアプリ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 18px;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    textarea {
+      width: 100%;
+      font-size: 18px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+    .memo {
+      background-color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .timestamp {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
 <body>
   <h1>メモを追加</h1>
   <form method="post">
-    <textarea name="content" rows="4" cols="50"></textarea><br>
+    <textarea name="content" rows="4"></textarea><br>
     <button type="submit">保存</button>
   </form>
 
   <h2>保存されたメモ</h2>
   {% for memo in memos %}
-    <div style="margin-bottom: 1em; border-bottom: 1px solid #ccc; padding-bottom: 1em;">
-      <strong>{{ memo[2] }}</strong><br>
-      {{ memo[1] }}<br>
-      <form method="post" action="/delete/{{ memo[0] }}" style="display:inline;">
+    <div class="memo">
+      <div class="timestamp">{{ memo[2] }}</div>
+      <div>{{ memo[1] }}</div>
+      <form method="post" action="/delete/{{ memo[0] }}" style="margin-top: 5px;">
         <button type="submit">削除</button>
       </form>
     </div>
@@ -61,6 +92,7 @@ HTML_TEMPLATE = '''
 </body>
 </html>
 '''
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
