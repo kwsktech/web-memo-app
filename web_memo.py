@@ -64,7 +64,7 @@ HTML_TEMPLATE = '''
     color: white;
   }
   .memo {
-    background-color: white;
+    background-color: black
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
