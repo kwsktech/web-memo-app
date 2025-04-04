@@ -43,34 +43,44 @@ HTML_TEMPLATE = '''
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Webメモアプリ</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      font-size: 18px;
-      padding: 20px;
-      background-color: #f7f7f7;
-    }
-    textarea {
-      width: 100%;
-      font-size: 18px;
-    }
-    button {
-      font-size: 18px;
-      padding: 10px 20px;
-      margin-top: 10px;
-    }
-    .memo {
-      background-color: white;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .timestamp {
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
+ <style>
+  body {
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    background-color: #f0f2f5;
+  }
+  textarea {
+    width: 100%;
+    font-size: 18px;
+  }
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+  }
+  .memo {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease;
+  }
+  .memo:hover {
+    transform: scale(1.01);
+  }
+  .timestamp {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+</style>
+
 </head>
 <body>
   <h1>メモを追加</h1>
