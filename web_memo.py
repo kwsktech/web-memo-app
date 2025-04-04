@@ -43,16 +43,22 @@ HTML_TEMPLATE = '''
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Webメモアプリ</title>
- <style>
+<style>
   body {
     font-family: sans-serif;
     font-size: 18px;
     padding: 20px;
-    background-color: #f0f2f5;
+    background-color: #121212;
+    color: #f0f0f0;
   }
   textarea {
     width: 100%;
     font-size: 18px;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
   }
   button {
     font-size: 16px;
@@ -62,24 +68,25 @@ HTML_TEMPLATE = '''
     border: none;
     background-color: #4CAF50;
     color: white;
+    cursor: pointer;
   }
   .memo {
-    background-color: black
+    background-color: #1f1f1f;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.1s ease;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
   }
   .memo:hover {
     transform: scale(1.01);
   }
   .timestamp {
     font-size: 14px;
-    color: #666;
+    color: #aaaaaa;
     margin-bottom: 5px;
   }
 </style>
+
 
 </head>
 <body>
