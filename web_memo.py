@@ -43,6 +43,7 @@ HTML_TEMPLATE = '''
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Webメモアプリ</title>
+  <link rel="manifest" href="/manifest.json">
 <style>
   body {
     font-family: sans-serif;
