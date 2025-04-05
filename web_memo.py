@@ -97,7 +97,7 @@ HTML_TEMPLATE = '''
 
 </head>
 <body>
-  <h1>メモを追加</h1>
+  <h1>たかめも</h1>
   <form method="post">
     <textarea name="content" rows="4"></textarea><br>
     <button type="submit">保存</button>
