@@ -47,46 +47,52 @@ HTML_TEMPLATE = '''
 <style>
   body {
     font-family: sans-serif;
-    font-size: 18px;
-    padding: 20px;
+    font-size: 12px; /* ← 全体の文字を小さく */
+    padding: 15px;
     background-color: #121212;
     color: #f0f0f0;
   }
+
   textarea {
     width: 100%;
-    font-size: 18px;
+    font-size: 12px; /* ← テキストエリアも小さく */
     background-color: #1e1e1e;
     color: #f0f0f0;
     border: 1px solid #333;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 4px;
+    padding: 6px;
   }
+
   button {
-    font-size: 16px;
-    padding: 8px 16px;
-    margin-top: 10px;
-    border-radius: 6px;
+    font-size: 12px; /* ← ボタン文字サイズを小さく */
+    padding: 4px 8px; /* ← ボタンの余白を小さく */
+    margin-top: 8px;
+    border-radius: 4px;
     border: none;
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
   }
+
   .memo {
     background-color: #1f1f1f;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
   }
+
   .memo:hover {
-    transform: scale(1.01);
+    transform: scale(1.005);
   }
+
   .timestamp {
-    font-size: 14px;
+    font-size: 10px; /* ← 日時も小さめに */
     color: #aaaaaa;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 </style>
+
 
 
 </head>
